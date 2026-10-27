@@ -100,10 +100,10 @@ Only after the user selects functions should we map each selected function to an
 
 Keep optional integrations disabled through supported configuration and manifests wherever possible. If the default install activates capabilities beyond this minimal scope, identify the owning config/plugin and disable them narrowly. Record what was disabled and how to re-enable it.
 
-## 8. Execution sequence — no application code until the baseline is accepted
+## 9. Execution sequence — no application code until the baseline is accepted
 
 ### Stage A — Reproducible source baseline
-1. Create a dedicated implementation branch from the official `v2026.10.7` tag target; keep `main` unchanged.
+1. Create a dedicated implementation branch from the inspected fork `main` head; keep `main` unchanged. Record the exact source SHA. Do not switch to the older release tag without a concrete reason.
 2. On the Windows checkout, inspect `git status -sb`, remotes and branch head before changing anything.
 3. Verify Node and pnpm requirements, install the checked-in workspace dependencies once, and follow the repository's current source-build instructions.
 4. Start the uncustomized Gateway and Control UI, then record concrete startup/build errors and the exact commands used.
@@ -132,7 +132,7 @@ Run targeted checks through the actual Windows product flow, not only mocks:
 
 Only after these pass should we propose the next specialized capability.
 
-## 9. Update and change discipline
+## 10. Update and change discipline
 
 - Keep the fork's `main` and all upstream source intact during planning and initial proof.
 - Use dedicated, small ATLAS branches/commits. Keep a clear record of the upstream baseline and ATLAS-only changes.
@@ -140,7 +140,7 @@ Only after these pass should we propose the next specialized capability.
 - Every changed behavior needs an end-to-end acceptance check that could fail on the unmodified baseline.
 - Do not claim the project runs locally until the Windows build and user-facing flow have actually been exercised.
 
-## 10. Acceptance definition
+## 11. Acceptance definition
 
 ATLAS v0 is complete when the user can launch it locally on Windows, configure their own provider credential without committing it, have natural conversations with incremental streaming, restart without losing the conversation, and use a supported custom skill, while ATLAS's identity is present and unneeded integrations remain disabled.
 
