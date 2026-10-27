@@ -18,6 +18,7 @@ type BridgeResult = JsonRecord & { error?: string };
 
 const childEnvironmentKeys = [
   "PATH",
+  "PATHEXT",
   "SystemRoot",
   "WINDIR",
   "TEMP",
