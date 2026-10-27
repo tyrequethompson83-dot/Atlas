@@ -76,7 +76,21 @@ Do not assume protocol compatibility from the URL alone. Verify with the exact m
 
 Reference: [custom provider configuration](https://github.com/tyrequethompson83-dot/Atlas/blob/main/docs/concepts/model-providers/custom-providers.md) and the existing [xKiro integration tests](https://github.com/tyrequethompson83-dot/forex_jarvis/blob/main/tests/test_xkiro_integration.py).
 
-## 7. Explicitly out of scope for v0
+## 7. User decision checkpoint — original ATLAS functions
+
+**Required before any port from `forex_jarvis`: ask the user which functions to bring over. Do not silently decide.**
+
+Once the OpenClaw baseline is verified and before implementing ATLAS customizations, inspect the original repository and prepare a function inventory grouped by area. For every candidate, give a brief description, identify its existing source/module and dependencies, explain whether it appears to be product behavior, infrastructure, UI, research, or trading functionality, and recommend one of: **bring over**, **configure natively in OpenClaw**, **defer**, or **leave behind**.
+
+Present that inventory to the user and ask which functions they want included. Where the user has not decided, leave the function out of the implementation scope until they choose. The default is not to port it.
+
+Separate choices that may be easy to overlook: ATLAS identity/personality; user preference/memory behaviors; provider settings and xKiro integration; conversation/task continuity; news and economic-event research; MT5/chart context; research records and experiment evaluation; trade preparation and execution safeguards; startup briefings and monitoring; voice/Live Mode; custom UI and holographic presence; strategy/backtesting interfaces; historical tools and legacy paths.
+
+Do not treat the above list as a request to include those features. It is an inventory guide to support an informed choice. In particular, MT5, market tools, trading, background autonomy, and Live Mode remain out of v0 unless separately approved. Live Mode additionally remains gated by the user's previously stated CPI-to-gold research completion and explicit direction.
+
+Only after the user selects functions should we map each selected function to an OpenClaw owner or supported extension point, identify any necessary port and its dependencies, and implement the smallest vertical slice. Keep `forex_jarvis` independent and unchanged.
+
+## 8. Explicitly out of scope for v0
 
 - MetaTrader 5, chart and market-data tools, trading, order execution, strategies, backtesting and market-specific research.
 - Live Mode, realtime voice, holographic presence, and custom avatar/UI work.
