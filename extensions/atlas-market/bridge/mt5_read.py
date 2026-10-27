@@ -136,7 +136,8 @@ def build_candles_payload(
     if retrieved.tzinfo is None:
         retrieved = retrieved.replace(tzinfo=timezone.utc)
     rows: list[dict[str, Any]] = []
-    for rate in list(rates or [])[-max(1, min(MAX_BARS, int(limit))):]:
+    rate_list = list(rates) if rates is not None else []
+    for rate in rate_list[-max(1, min(MAX_BARS, int(limit))):]:
         when = _utc_iso(_value(rate, "time"))
         open_value = _finite_number(_value(rate, "open"))
         high_value = _finite_number(_value(rate, "high"))
