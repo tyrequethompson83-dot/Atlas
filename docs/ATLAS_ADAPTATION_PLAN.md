@@ -145,3 +145,11 @@ Only after these pass should we propose the next specialized capability.
 ATLAS v0 is complete when the user can launch it locally on Windows, configure their own provider credential without committing it, have natural conversations with incremental streaming, restart without losing the conversation, and use a supported custom skill, while ATLAS's identity is present and unneeded integrations remain disabled.
 
 This is a reliable OpenClaw-based conversational foundation—not yet a market-reading agent. MT5, news analysis and trading capabilities are later, separately scoped work.
+
+## 12. Execution log — 2026-10-26
+
+- **Completed:** verified `Atlas` is the new OpenClaw fork and `Atlas-bootstrap` is the renamed, separate bootstrap repository. No rename/fork repetition was performed.
+- **Completed:** created `atlas/v0-foundation` from the inspected fork `main` commit `ec698cc702caf9694e6d0df3935b4ac0316b4397`. It is the implementation work branch; `main` was not modified.
+- **Completed:** inspected the fork's MIT license, third-party notices, root source structure, Windows documentation, Node compatibility documentation, workspace skill loading, model provider setup, and agent workspace/persona surfaces.
+- **Not yet proven:** source installation/build, Gateway startup, local Control UI chat, real provider response, streaming, and persistence on the user's Windows machine. The connected remote GitHub tools can inspect and edit the remote repository but cannot execute commands in the user's Windows checkout. This execution container is not that checkout; it reports Node `v22.16.0`, has no `pnpm`, and cannot resolve `github.com`, so it cannot be used as evidence that the user's Windows baseline passes or fails.
+- **Next gate:** in the actual Windows clone of `Atlas`, capture the current Git branch/head/status and `node -v` / `pnpm -v` before dependency installation. Required source-build Node is `24.22.1+` in the Node 24 line or `26.12.1+` in the Node 26 line, and the repository directs source installs to use `pnpm install --frozen-lockfile`. Do not begin ATLAS feature ports before the baseline is accepted and the user has selected which original functions to bring over.
