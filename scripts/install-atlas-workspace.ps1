@@ -49,7 +49,9 @@ Write-Host "Target OpenClaw workspace: $WorkspacePath"
 Write-Host "Existing files will be backed up before being replaced."
 
 foreach ($sourceFile in $sourceFiles) {
-    $relativePath = [System.IO.Path]::GetRelativePath($sourceRoot, $sourceFile.FullName)
+    # Use substring-based relative paths for Windows PowerShell 5.1/.NET Framework compatibility.
+    $sourceRootPrefix = $sourceRoot.TrimEnd([char[]]@('\', '/')) + [System.IO.Path]::DirectorySeparatorChar
+    $relativePath = $sourceFile.FullName.Substring($sourceRootPrefix.Length)
     $destination = Join-Path $WorkspacePath $relativePath
 
     if (Test-Path -LiteralPath $destination) {
