@@ -237,5 +237,62 @@ export default definePluginEntry({
         });
       },
     });
+
+    api.registerTool({
+      name: "atlas_economic_surprise",
+      description: "Calculate a transparent economic-release surprise from explicitly sourced actual and consensus forecast values. Returns actual minus forecast in the supplied units; it does not infer whether an asset should rise or fall. Missing actual/forecast remains unavailable, never zero. Read-only arithmetic; does not fetch, store, or refresh calendar data.",
+      parameters: Type.Object({
+        event_name: Type.String({ minLength: 1, maxLength: 160 }),
+        actual: Type.Union([Type.Number(), Type.Null()]),
+        forecast: Type.Union([Type.Number(), Type.Null()]),
+        previous: Type.Optional(Type.Union([Type.Number(), Type.Null()])),
+        units: Type.Optional(Type.String({ maxLength: 40 })),
+        tolerance: Type.Optional(Type.Number({ minimum: 0 })),
+        source_url: Type.Optional(Type.String({ minLength: 1, maxLength: 2048 })),
+        released_at: Type.Optional(Type.String({ minLength: 1, maxLength: 64 })),
+      }, { additionalProperties: false }),
+      async execute(_toolCallId, params) {
+        const actual = params.actual;
+        const forecast = params.forecast;
+        const tolerance = typeof params.tolerance === "number" ? params.tolerance : 0;
+        const units = params.units?.trim() || null;
+        let rawSurprise: number | null = null;
+        let direction = "UNAVAILABLE";
+        let note: string | null = null;
+
+        if (actual === null || forecast === null) {
+          note = actual === null && forecast === null
+            ? "Actual and forecast are unavailable; surprise cannot be calculated."
+            : actual === null
+              ? "Actual is unavailable; the event may not have been released."
+              : "Forecast is unavailable; surprise cannot be calculated without consensus.";
+        } else {
+          rawSurprise = Number((actual - forecast).toPrecision(12));
+          direction = rawSurprise > tolerance ? "ABOVE"
+            : rawSurprise < -tolerance ? "BELOW" : "IN_LINE";
+        }
+
+        const result = {
+          event_name: params.event_name,
+          actual,
+          forecast,
+          previous: params.previous ?? null,
+          change_from_previous: actual !== null && params.previous != null
+            ? Number((actual - params.previous).toPrecision(12)) : null,
+          raw_surprise: rawSurprise,
+          direction,
+          units,
+          tolerance,
+          source_url: params.source_url ?? null,
+          released_at: params.released_at ?? null,
+          note,
+          interpretation_boundary: "ABOVE/BELOW describes actual versus forecast only, not bullish/bearish direction. Market impact depends on the event, prior expectations, revisions, and the asset's reaction.",
+        };
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+          details: result,
+        };
+      },
+    });
   },
 });
