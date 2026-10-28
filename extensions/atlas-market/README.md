@@ -5,6 +5,7 @@ This is an opt-in OpenClaw plugin for read-only data from a locally running Meta
 - atlas_market_quote
 - atlas_market_candles
 - atlas_market_structure
+- atlas_economic_surprise — deterministic actual-versus-forecast arithmetic for sourced releases; it is not a calendar provider or directional market signal.
 
 It is not enabled by this change. It does not read account balances or positions, place or modify orders, or make trading decisions.
 
