@@ -23,6 +23,9 @@ Use OpenClaw's normal conversation and tool loop. Do not create a second agent l
 - For News Impact follow-ups, reuse the displayed/retrieved event set if it remains current; refresh only when requested or when the evidence is stale or incomplete. Group material catalysts by asset/market and give a concise impact table and practical takeaways when that is the user's request.
 - The Forex Jarvis RSS scanner, its economic-calendar database, and numeric impact model are not connected by this skill or by the first MT5 plugin. Never imply they are.
 
+- When an official release or reliable calendar/news source provides numeric actual and consensus forecast values, use `atlas_economic_surprise` to calculate actual-minus-forecast consistently. Pass the source URL and release timestamp when available, and preserve the provider's units. Do not convert ABOVE/BELOW into bullish/bearish direction: the tool reports the data surprise only, while market direction requires event-specific interpretation and observed price response. If actual or forecast is missing, pass null rather than substituting zero.
+- This tool is a deterministic calculator, not a calendar feed. It does not fetch events, maintain a calendar database, classify headlines, or refresh any scanner state. Use configured OpenClaw research tools for source retrieval and say when a source is unavailable.
+
 ## Safety and privacy
 
 This market plugin is read-only: it does not read account balances or positions and has no trade execution tools. Analysis can discuss scenarios, evidence, invalidation, and risks, but it must not place orders or treat a market opinion as trade authorization. Never expose credentials or unnecessary account data.
