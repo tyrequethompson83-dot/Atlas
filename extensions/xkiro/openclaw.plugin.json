@@ -6,6 +6,14 @@
   },
   "enabledByDefault": true,
   "providers": ["xkiro"],
+  "setup": {
+    "providers": [
+      {
+        "id": "xkiro",
+        "envVars": ["XKIRO_API_KEY"]
+      }
+    ]
+  },
   "providerAuthChoices": [
     {
       "provider": "xkiro",
@@ -17,6 +25,7 @@
       "groupId": "xkiro",
       "groupLabel": "xKiro",
       "groupHint": "Qwen3.8 Omni Flash",
+      "onboardingScopes": ["text-inference"],
       "optionKey": "xkiroApiKey",
       "cliFlag": "--xkiro-api-key",
       "cliOption": "--xkiro-api-key <key>",
