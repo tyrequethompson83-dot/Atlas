@@ -1,5 +1,6 @@
 import { defineSingleProviderPluginEntry } from "openclaw/plugin-sdk/provider-entry";
 import { applyXkiroConfig, XKIRO_DEFAULT_MODEL_REF } from "./onboard.js";
+import { buildXkiroProvider } from "./provider-catalog.js";
 import manifest from "./openclaw.plugin.json" with { type: "json" };
 
 export default defineSingleProviderPluginEntry({
@@ -13,6 +14,9 @@ export default defineSingleProviderPluginEntry({
     manifestAuth: {
       defaultModel: XKIRO_DEFAULT_MODEL_REF,
       applyConfig: applyXkiroConfig,
+    },
+    catalog: {
+      buildProvider: buildXkiroProvider,
     },
   },
 });
