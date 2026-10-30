@@ -1,8 +1,8 @@
 {
   "id": "atlas-market",
   "name": "ATLAS Market Read",
-  "description": "Explicitly enabled, read-only quote, candle, and descriptive market-structure tools backed by a locally running MetaTrader 5 terminal.",
-  "categories": ["finance"],
+  "description": "Explicitly enabled, read-only quote, candle, descriptive market-structure, and sourced economic-surprise tools.",
+  "categories": ["finance-payments"],
   "activation": {
     "onStartup": false
   },
@@ -10,7 +10,8 @@
     "tools": [
       "atlas_market_quote",
       "atlas_market_candles",
-      "atlas_market_structure"
+      "atlas_market_structure",
+      "atlas_economic_surprise"
     ]
   },
   "configSchema": {
