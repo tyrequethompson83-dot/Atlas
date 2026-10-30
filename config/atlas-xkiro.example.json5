@@ -1,12 +1,13 @@
 {
   // Example only: merge this into ~/.openclaw/openclaw.json when you are ready
-  // to configure xKiro. Keep XKIRO_API_KEY in the local Gateway environment.
+  // to configure xKiro. Enter the API key in Settings -> Models -> Providers.
+  // OpenClaw stores the key in its native auth-profile store; no environment
+  // variable or plaintext API key is required in this configuration.
   models: {
     mode: "merge",
     providers: {
       xkiro: {
         baseUrl: "https://api.xkiro.com/v1",
-        apiKey: "${XKIRO_API_KEY}",
         api: "openai-completions",
         timeoutSeconds: 300,
         models: [
