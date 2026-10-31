@@ -139,14 +139,14 @@ Proposed workspace skill boundaries:
 
 | Skill directory | Source material / responsibility | Status |
 |---|---|---|
-| `atlas-market-structure` | XAU Cartel Market Structure lesson: trend/range, meaningful swings, BOS/CHoCH and multi-timeframe context. | Source recovered; native skill not yet created. |
+| `atlas-market-structure` | XAU Cartel Market Structure lesson: trend/range, meaningful swings, BOS/CHoCH and multi-timeframe context. | Native skill created; runtime not yet verified. |
 | `atlas-liquidity` | XAU Cartel Liquidity lesson: BSL/SSL, likely order pools, sweeps versus breakouts and liquidity objectives. | Source recovered; native skill not yet created. |
 | `atlas-smart-money-concepts` | XAU Cartel Order Blocks and FVG lessons: displacement, OB candidates, FVG/CE/IFVG, mitigation and confluence. | Source recovered; native skill not yet created. |
 | `atlas-volume-profile` | POC, VAH, VAL, HVN and LVN from a separately sourced volume-at-price methodology. | Source not recovered; do not implement or invent levels yet. |
 | `atlas-news-impact` | Forex Jarvis headline intelligence and news-impact workflow, kept distinct from scheduled economic research. | Native skill created; RSS integration is not connected. |
-| `atlas-macro-research` | Forex Jarvis calendar and macro-research workflow: official release data, actual/forecast/previous, revisions and policy interpretation. | Source code inspected; native skill not yet created. Historical reaction database is not a prerequisite. |
-| `atlas-trade-scenario-analysis` | Combine relevant evidence into conditional bullish, bearish and neutral scenarios with confirmation, invalidation and objectives. | Analytical rules documented; native skill not yet created. |
-| `atlas-risk-management` | Risk and execution conditions, invalidation, targets, costs and approval boundaries. | Requires focused source review and validation. |
+| `atlas-macro-research` | Forex Jarvis calendar and macro-research workflow: official release data, actual/forecast/previous, revisions and policy interpretation. | Native skill created. Historical reaction database is not a prerequisite; runtime/provider verification remains. |
+| `atlas-trade-scenario-analysis` | Combine relevant evidence into conditional bullish, bearish and neutral scenarios with confirmation, invalidation and objectives. | Native skill created; runtime not yet verified. |
+| `atlas-risk-management` | Risk and execution conditions, invalidation, targets, costs and approval boundaries. | Native skill created; deeper source review and runtime validation remain. |
 
 `atlas-market-reading` remains the conversational coordinator. It establishes context, selects relevant data, integrates specialist evidence and produces the answer. It should not duplicate all specialist content. `atlas-market-stress` remains a separate cross-asset systemic-stress research skill.
 
