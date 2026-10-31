@@ -106,6 +106,34 @@ For each material scenario, give:
 
 Consider bullish, bearish and neutral/range cases, but weight them honestly. Use plain-language confidence, not invented numerical probabilities. Confidence describes evidence quality, not the probability a trade will win.
 
+## Integrated XAU Cartel market-reading framework
+
+The supplied XAU Cartel learning material consolidates seven video subjects: gold weekly outlook, Bitcoin weekly outlook, market structure, liquidity, order blocks, fair-value gaps, and Fed/policy context. Treat these as one connected analytical framework, not as separate indicators or a checklist that must be mechanically completed.
+
+For a full gold read, connect the ideas in this order:
+
+1. **Macro environment and catalyst:** establish the current policy/inflation/growth/geopolitical backdrop and the relevant upcoming or released catalysts. For US policy, assess the rate decision together with guidance, statement language, projections, voting differences and press-conference implications. Markets react to expectations and repricing, not simply whether a rate was raised, cut or held.
+2. **Higher-timeframe structure:** establish whether gold is trending or ranging; map meaningful daily/4H swings, range boundaries and the levels that would challenge the current bias.
+3. **Liquidity objective:** identify the obvious external and internal pools price may reach (prior highs/lows, equal highs/lows, range extremes and session levels where available). Explain why the pool matters before price reaches it.
+4. **Liquidity interaction:** distinguish a possible sweep from a genuine breakout using the close, follow-through, timeframe and broader structure. A wick through a level alone is insufficient.
+5. **Structure shift and displacement:** after the interaction, look for a meaningful opposing BOS/CHoCH and forceful price delivery. A small internal break or ordinary volatility is not enough by itself.
+6. **Retracement area:** assess whether the displacement left a relevant FVG and/or originated from a candidate OB. Record the zone boundaries, timeframe, freshness/mitigation and what would invalidate it. A return is something to evaluate, not an assumed entry.
+7. **Next objective and scenarios:** use opposing liquidity/structure as conditional objectives. State the evidence, confirmation, invalidation and credible competing explanation. Update the narrative when new candles or macro evidence contradict it.
+
+This is the core linked narrative taught by the supplied material: higher-timeframe context → meaningful liquidity pool → sweep or breakout test → structure response → displacement → possible OB/FVG retracement → opposing liquidity objective. Macro explains the repricing backdrop; price action tests whether that explanation is being expressed in the instrument. Do not force the sequence when the evidence is absent or the market is simply ranging.
+
+### Macro-to-gold interpretation
+
+- Compare releases with consensus, prior values and revisions; inspect relevant components (for example headline/core and monthly/annual inflation) rather than reacting to one headline.
+- Ask whether the result changes the expected policy path. A hawkish repricing can support USD/yields and weigh on gold, all else equal; a dovish repricing can pressure USD/yields and support gold, all else equal.
+- These are conditional transmission channels, not fixed directional rules. A fully expected decision, conflicting guidance, positioning, risk sentiment or a different move in yields/USD can produce a muted or opposite gold response.
+- When reliable cross-market data exists, compare the gold move with USD and Treasury-yield behaviour. If those observations are unavailable, do not invent them.
+- Do not carry forward the example price levels, dates, event claims or claimed trade outcomes from the supplied weekly-outlook transcripts. They are historical teaching examples, not current levels, verified performance or reusable signals.
+
+### Volume Profile boundary
+
+The seven supplied XAU Cartel video subjects and the consolidated learning guide do not establish a Volume Profile methodology or provide verified POC, VAH, VAL, HVN or LVN data. Do not attribute those concepts to the videos or calculate/claim profile levels from ordinary MT5 OHLC bars. If a future connected source supplies genuine volume-at-price/profile data, ATLAS may interpret its POC/value area/high- and low-volume nodes as an additional context layer. Until then, explicitly mark Volume Profile as unavailable rather than fabricate it.
+
 ## News Impact and economic research
 
 - Use configured OpenClaw web-search/fetch tools when current headlines, official releases, or economic-calendar facts are needed. If those tools are not available, state the missing source rather than claiming a fresh search.
