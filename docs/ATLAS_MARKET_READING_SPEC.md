@@ -131,6 +131,30 @@ Assess displacement, structure, liquidity context, timeframe and freshness. Tiny
 ### Confluence
 Confluence adds weight when reasonably independent pieces of evidence agree—for example, a sweep of equal highs, a meaningful 15M CHoCH down, bearish displacement, a fresh FVG and alignment with a 4H lower-high structure. Do not count several labels describing the same candle as independent evidence.
 
+## 5A. Integrated XAU Cartel learning framework
+
+The supplied XAU Cartel learning guide consolidates seven video subjects: gold weekly outlook, Bitcoin weekly outlook, market structure, liquidity, order blocks, fair-value gaps and Fed/policy context. Use these as a connected way of reading markets, not as isolated indicators or a mechanical checklist.
+
+For gold, the analytical chain is:
+
+1. Establish the current macro/policy backdrop and relevant catalysts.
+2. Map daily/4H trend or range, meaningful swings and decision boundaries.
+3. Identify obvious liquidity pools before price interacts with them.
+4. Evaluate whether the interaction is a sweep or a genuine breakout using closes, follow-through, timeframe and context.
+5. Look for meaningful structure response (BOS/CHoCH) and displacement.
+6. Assess any resulting OB/FVG retracement area, including timeframe, freshness, mitigation and invalidation.
+7. Use the next opposing liquidity/structural area as a conditional objective and compare competing scenarios.
+
+The unifying narrative is higher-timeframe context → liquidity objective → sweep/breakout test → structure response → displacement → possible OB/FVG retracement → opposing liquidity objective. Macro helps explain why repricing may be occurring; price action shows whether and how that context is reflected in the instrument. Do not force the chain when evidence is missing.
+
+For Fed and gold analysis, examine the decision together with guidance, statement language, projections, voting differences and press-conference implications. Compare inflation and other releases with expectations, previous values, revisions and relevant components. A hawkish repricing may support USD/yields and weigh on gold, all else equal; a dovish repricing may pressure USD/yields and support gold, all else equal. These are conditional channels, not automatic direction rules. Check observed USD/yield response only when reliable data exists.
+
+The weekly outlook transcript examples are historical teaching material. Their dates, price levels, event claims and claimed trade outcomes must not be reused as current market facts or treated as validated performance.
+
+### Volume Profile boundary
+
+The supplied seven-video learning set does not establish a Volume Profile method or supply verified POC, VAH, VAL, HVN or LVN data. These concepts may be added as a separate analytical layer only when a genuine volume-at-price/profile source is connected. Ordinary OHLC bars and the current MT5 adapter's volume field are not sufficient to claim those levels. Until then, report the data as unavailable; do not fabricate profile values or attribute them to the XAU Cartel videos.
+
 ## 6. Scenario and confidence rules
 
 Use plain-language confidence, not invented numerical probabilities unless a validated statistical model supports them:
