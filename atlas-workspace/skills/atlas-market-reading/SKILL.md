@@ -106,47 +106,34 @@ For each material scenario, give:
 
 Consider bullish, bearish and neutral/range cases, but weight them honestly. Use plain-language confidence, not invented numerical probabilities. Confidence describes evidence quality, not the probability a trade will win.
 
-## Integrated XAU Cartel market-reading framework
+## Specialized native-skill architecture
 
-The supplied XAU Cartel learning material consolidates seven video subjects: gold weekly outlook, Bitcoin weekly outlook, market structure, liquidity, order blocks, fair-value gaps, and Fed/policy context. Treat these as one connected analytical framework, not as separate indicators or a checklist that must be mechanically completed.
+The XAU Cartel learning guide is source material for multiple separate OpenClaw skills. Do not treat the guide as one giant skill or copy all of its specialist knowledge into this coordinator.
 
-For a full gold read, connect the ideas in this order:
+The planned skill boundaries are:
+- `atlas-market-structure`: trend/range, meaningful swings, BOS/CHoCH and multi-timeframe structure.
+- `atlas-liquidity`: buy-side/sell-side pools, likely stop clusters, sweeps versus breakouts, and liquidity objectives.
+- `atlas-smart-money-concepts`: displacement, candidate order blocks, FVG/CE/IFVG, mitigation and confluence.
+- `atlas-news-impact`: current headline collection/research, classification, affected markets, severity and impact channels. This native skill has been created separately.
+- `atlas-macro-research`: scheduled economic events, actual/forecast/previous values, revisions and macro-policy interpretation. Keep separate from headline intelligence; this skill is not yet ported.
+- `atlas-trade-scenario-analysis`: combine the relevant evidence into conditional bullish, bearish and neutral scenarios, confirmation and invalidation.
+- `atlas-risk-management`: risk, execution conditions and trade safeguards; requires its own source review and validation.
+- `atlas-volume-profile`: proposed only. The recovered XAU Cartel guide does not provide a source-backed method or profile data for POC, VAH, VAL, HVN or LVN, so do not claim or fabricate those levels.
 
-1. **Macro environment and catalyst:** establish the current policy/inflation/growth/geopolitical backdrop and the relevant upcoming or released catalysts. For US policy, assess the rate decision together with guidance, statement language, projections, voting differences and press-conference implications. Markets react to expectations and repricing, not simply whether a rate was raised, cut or held.
-2. **Higher-timeframe structure:** establish whether gold is trending or ranging; map meaningful daily/4H swings, range boundaries and the levels that would challenge the current bias.
-3. **Liquidity objective:** identify the obvious external and internal pools price may reach (prior highs/lows, equal highs/lows, range extremes and session levels where available). Explain why the pool matters before price reaches it.
-4. **Liquidity interaction:** distinguish a possible sweep from a genuine breakout using the close, follow-through, timeframe and broader structure. A wick through a level alone is insufficient.
-5. **Structure shift and displacement:** after the interaction, look for a meaningful opposing BOS/CHoCH and forceful price delivery. A small internal break or ordinary volatility is not enough by itself.
-6. **Retracement area:** assess whether the displacement left a relevant FVG and/or originated from a candidate OB. Record the zone boundaries, timeframe, freshness/mitigation and what would invalidate it. A return is something to evaluate, not an assumed entry.
-7. **Next objective and scenarios:** use opposing liquidity/structure as conditional objectives. State the evidence, confirmation, invalidation and credible competing explanation. Update the narrative when new candles or macro evidence contradict it.
-
-This is the core linked narrative taught by the supplied material: higher-timeframe context → meaningful liquidity pool → sweep or breakout test → structure response → displacement → possible OB/FVG retracement → opposing liquidity objective. Macro explains the repricing backdrop; price action tests whether that explanation is being expressed in the instrument. Do not force the sequence when the evidence is absent or the market is simply ranging.
-
-### Macro-to-gold interpretation
-
-- Compare releases with consensus, prior values and revisions; inspect relevant components (for example headline/core and monthly/annual inflation) rather than reacting to one headline.
-- Ask whether the result changes the expected policy path. A hawkish repricing can support USD/yields and weigh on gold, all else equal; a dovish repricing can pressure USD/yields and support gold, all else equal.
-- These are conditional transmission channels, not fixed directional rules. A fully expected decision, conflicting guidance, positioning, risk sentiment or a different move in yields/USD can produce a muted or opposite gold response.
-- When reliable cross-market data exists, compare the gold move with USD and Treasury-yield behaviour. If those observations are unavailable, do not invent them.
-- Do not carry forward the example price levels, dates, event claims or claimed trade outcomes from the supplied weekly-outlook transcripts. They are historical teaching examples, not current levels, verified performance or reusable signals.
-
-### Volume Profile boundary
-
-The seven supplied XAU Cartel video subjects and the consolidated learning guide do not establish a Volume Profile methodology or provide verified POC, VAH, VAL, HVN or LVN data. Do not attribute those concepts to the videos or calculate/claim profile levels from ordinary MT5 OHLC bars. If a future connected source supplies genuine volume-at-price/profile data, ATLAS may interpret its POC/value area/high- and low-volume nodes as an additional context layer. Until then, explicitly mark Volume Profile as unavailable rather than fabricate it.
+This coordinator keeps the overall conversational market-reading flow and selects relevant specialist knowledge. The specialist skills own their detailed methods. Build and verify them incrementally; a planned skill is not an implemented or validated capability.
 
 ## News Impact and economic research
 
-- Use configured OpenClaw web-search/fetch tools when current headlines, official releases, or economic-calendar facts are needed. If those tools are not available, state the missing source rather than claiming a fresh search.
-- Prefer official releases and primary sources for event times, actual/forecast/previous readings, central-bank statements and macro data. Keep event dates, timezone, assets and instrument scope explicit.
-- Compare actual with forecast and previous when available; account for revisions and relevant components. Interpret the release in its policy and market context, not by the headline alone.
-- For gold and USD-related instruments, assess relevant rate, dollar and risk-sentiment channels. Check the observed USD/yields response only when reliable data is actually available.
-- Reconcile macro and chart evidence. If they conflict, state the conflict.
-- For News Impact follow-ups, reuse the displayed/retrieved event set if it remains current; refresh only when requested or evidence is stale/incomplete. When asked for a full event outlook, group material catalysts by asset/market and provide an impact table plus practical takeaways.
-- Around major releases, note that spreads can widen, liquidity can thin and slippage can increase. Do not treat a fixed pre/post-news waiting window as a universal rule; assess the event and market conditions.
+- For current headlines or a News Impact request, use the separate `atlas-news-impact` skill. It is a native analytical workflow; it does not itself provide RSS/web access.
+- Use only configured OpenClaw search/fetch tools or actual connected news sources. The Forex Jarvis RSS scanner and its event-classification tools are not connected to this OpenClaw branch. Never imply the original feed is live here.
+- Keep current headline intelligence separate from scheduled calendar research. For economic releases, prefer official release pages and reliable calendar sources; preserve event time/timezone, actual, consensus forecast, previous, revisions and units.
+- Use `atlas_economic_surprise` only when sourced numeric actual and forecast values are available. It performs actual-minus-forecast arithmetic; it does not fetch or store calendar events and does not infer bullish/bearish asset direction. Preserve the source and units and pass null for missing values.
+- Do not port or recreate the legacy fixed per-pair percentage estimates as forecasts. They were heuristic baselines scaled by keyword-derived severity, and the old `confidence` field duplicated severity rather than measured predictive confidence.
+- Do not build or require the legacy historical event-reaction database for ordinary News Impact. Describe an observed market reaction only when timestamped price data is available; otherwise state that the reaction is unverified.
+- Reconcile macro/news evidence with chart evidence. If they conflict, state the conflict rather than forcing a single direction.
+- Around major releases, note possible spread widening, thinner liquidity and slippage. Do not treat a fixed pre/post-news waiting window as a universal rule.
 
-When an official release or reliable calendar/news source provides sourced numeric actual and consensus forecast values, use `atlas_economic_surprise` to calculate actual-minus-forecast. Pass source URL and release timestamp when available, and preserve units. Do not convert ABOVE/BELOW into bullish/bearish direction: the tool reports the data surprise only. If actual or forecast is missing, pass null rather than substituting zero.
-
-The economic-surprise tool is a deterministic calculator, not a calendar feed. It does not fetch events, maintain a calendar database, classify headlines or refresh a scanner. The Forex Jarvis RSS scanner and calendar store are not connected by this skill or the first MT5 plugin. Never imply they are.
+The original Forex Jarvis read-path fix is an important invariant for any future feed integration: ordinary reads must use a non-consuming read path like `NewsScanner.peek()`, not the consuming `scan()` path. A read must not advance a watermark, hide headlines from another panel, or mutate state. This OpenClaw skill currently relies on configured data tools and has no direct NewsScanner integration.
 
 ## Full market-read response format
 
