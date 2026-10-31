@@ -1,6 +1,6 @@
 # ATLAS capability port map — OpenClaw-native v0
 
-Status date: 2026-10-27. This is a source-grounded integration map, not a claim that the plugin is installed or that MT5 has been tested on the user's PC.
+Status date: 2026-10-31. This is a source-grounded integration map, not a claim that the plugin is installed or that MT5 has been tested on the user's PC.
 
 ## Governing architecture
 
