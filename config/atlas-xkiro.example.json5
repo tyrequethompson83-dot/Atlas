@@ -1,0 +1,37 @@
+{
+  // Example only: merge this into ~/.openclaw/openclaw.json when you are ready
+  // to configure xKiro. Enter the API key in Settings -> Models -> Providers.
+  // OpenClaw stores the key in its native auth-profile store; no environment
+  // variable or plaintext API key is required in this configuration.
+  models: {
+    mode: "merge",
+    providers: {
+      xkiro: {
+        baseUrl: "https://api.xkiro.com/v1",
+        api: "openai-completions",
+        timeoutSeconds: 300,
+        models: [
+          {
+            id: "qwen/qwen3.8-omni-flash:free",
+            name: "Qwen3.8 Omni Flash (xKiro)",
+            contextWindow: 1000000,
+            maxTokens: 65536,
+            input: ["text", "image"],
+            reasoning: true,
+            compat: {
+              supportsReasoningEffort: false,
+            },
+            cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+          },
+        ],
+      },
+    },
+  },
+  agents: {
+    defaults: {
+      model: {
+        primary: "xkiro/qwen/qwen3.8-omni-flash:free",
+      },
+    },
+  },
+}

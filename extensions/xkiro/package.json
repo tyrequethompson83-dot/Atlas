@@ -1,0 +1,15 @@
+{
+  "name": "@openclaw/xkiro-provider",
+  "version": "2026.10.7",
+  "description": "OpenClaw xKiro OpenAI-compatible provider plugin.",
+  "type": "module",
+  "devDependencies": {
+    "@openclaw/plugin-sdk": "workspace:*"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "private": true
+}

@@ -1,0 +1,68 @@
+{
+  "id": "xkiro",
+  "categories": ["models"],
+  "activation": {
+    "onStartup": false
+  },
+  "enabledByDefault": true,
+  "providers": ["xkiro"],
+  "setup": {
+    "providers": [
+      {
+        "id": "xkiro",
+        "envVars": ["XKIRO_API_KEY"]
+      }
+    ]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "xkiro",
+      "method": "api-key",
+      "choiceId": "xkiro-api-key",
+      "appGuidedSecret": true,
+      "choiceLabel": "xKiro API key",
+      "choiceHint": "OpenAI-compatible API endpoint",
+      "groupId": "xkiro",
+      "groupLabel": "xKiro",
+      "groupHint": "Qwen3.8 Omni Flash",
+      "onboardingScopes": ["text-inference"],
+      "optionKey": "xkiroApiKey",
+      "cliFlag": "--xkiro-api-key",
+      "cliOption": "--xkiro-api-key <key>",
+      "cliDescription": "xKiro API key"
+    }
+  ],
+  "modelCatalog": {
+    "providers": {
+      "xkiro": {
+        "baseUrl": "https://api.xkiro.com/v1",
+        "api": "openai-completions",
+        "defaultModel": "qwen/qwen3.8-omni-flash:free",
+        "models": [
+          {
+            "id": "qwen/qwen3.8-omni-flash:free",
+            "name": "Qwen3.8 Omni Flash (xKiro)",
+            "reasoning": true,
+            "input": ["text", "image"],
+            "contextWindow": 1000000,
+            "maxTokens": 65536,
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsReasoningEffort": false
+            }
+          }
+        ]
+      }
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

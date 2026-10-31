@@ -1,0 +1,21 @@
+{
+  "id": "atlas-market",
+  "name": "ATLAS Market Read",
+  "description": "Explicitly enabled, read-only quote, candle, descriptive market-structure, and sourced economic-surprise tools.",
+  "categories": ["finance-payments"],
+  "activation": {
+    "onStartup": false
+  },
+  "contracts": {
+    "tools": [
+      "atlas_market_quote",
+      "atlas_market_candles",
+      "atlas_market_structure",
+      "atlas_economic_surprise"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false
+  }
+}

@@ -810,6 +810,15 @@ importers:
         specifier: workspace:*
         version: link:../../packages/plugin-sdk
 
+  extensions/atlas-market:
+    devDependencies:
+      '@openclaw/plugin-sdk':
+        specifier: workspace:*
+        version: link:../../packages/plugin-sdk
+      typebox:
+        specifier: 1.4.1
+        version: 1.4.1
+
   extensions/autoreview:
     dependencies:
       typebox:
@@ -2737,6 +2746,12 @@ importers:
         version: link:../../packages/plugin-sdk
 
   extensions/xiaomi:
+    devDependencies:
+      '@openclaw/plugin-sdk':
+        specifier: workspace:*
+        version: link:../../packages/plugin-sdk
+
+  extensions/xkiro:
     devDependencies:
       '@openclaw/plugin-sdk':
         specifier: workspace:*

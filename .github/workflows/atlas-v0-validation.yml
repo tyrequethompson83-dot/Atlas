@@ -1,0 +1,59 @@
+name: ATLAS v0 focused validation
+
+on:
+  push:
+    branches:
+      - atlas/v0-foundation
+    paths:
+      - "extensions/atlas-market/**"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/atlas-v0-validation.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "extensions/atlas-market/**"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/atlas-v0-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: atlas-v0-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-mt5-bridge-tests:
+    name: Offline MT5 adapter unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run offline adapter tests
+        run: python -m unittest discover -s extensions/atlas-market/bridge -p "test_*.py" -v
+
+  extension-static-check:
+    name: OpenClaw extension lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.15.0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.22.1"
+          cache: pnpm
+      - name: Install frozen dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Lint OpenClaw extensions
+        run: pnpm lint:extensions
