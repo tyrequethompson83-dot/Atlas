@@ -1,7 +1,7 @@
 # ATLAS Market Reading Specification
 
 **Status:** Working product/behaviour specification  
-**Date:** 30 October 2026  
+**Date:** 31 October 2026  
 **Applies to:** Existing OpenClaw-native agent and the opt-in `atlas-market` plugin  
 **Purpose:** Define how ATLAS should interpret market evidence, form plausible explanations, develop conditional scenarios and communicate a useful market read.
 
@@ -140,8 +140,8 @@ Proposed workspace skill boundaries:
 | Skill directory | Source material / responsibility | Status |
 |---|---|---|
 | `atlas-market-structure` | XAU Cartel Market Structure lesson: trend/range, meaningful swings, BOS/CHoCH and multi-timeframe context. | Native skill created; runtime not yet verified. |
-| `atlas-liquidity` | XAU Cartel Liquidity lesson: BSL/SSL, likely order pools, sweeps versus breakouts and liquidity objectives. | Source recovered; native skill not yet created. |
-| `atlas-smart-money-concepts` | XAU Cartel Order Blocks and FVG lessons: displacement, OB candidates, FVG/CE/IFVG, mitigation and confluence. | Source recovered; native skill not yet created. |
+| `atlas-liquidity` | XAU Cartel Liquidity lesson: BSL/SSL, likely order pools, sweeps versus breakouts and liquidity objectives. | Native skill created; runtime not yet verified. |
+| `atlas-smart-money-concepts` | XAU Cartel Order Blocks and FVG lessons: displacement, OB candidates, FVG/CE/IFVG, mitigation and confluence. | Native skill created; runtime not yet verified. |
 | `atlas-volume-profile` | POC, VAH, VAL, HVN and LVN from a separately sourced volume-at-price methodology. | Source not recovered; do not implement or invent levels yet. |
 | `atlas-news-impact` | Forex Jarvis headline intelligence and news-impact workflow, kept distinct from scheduled economic research. | Native skill created; RSS integration is not connected. |
 | `atlas-macro-research` | Forex Jarvis calendar and macro-research workflow: official release data, actual/forecast/previous, revisions and policy interpretation. | Native skill created. Historical reaction database is not a prerequisite; runtime/provider verification remains. |
