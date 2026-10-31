@@ -131,29 +131,28 @@ Assess displacement, structure, liquidity context, timeframe and freshness. Tiny
 ### Confluence
 Confluence adds weight when reasonably independent pieces of evidence agree—for example, a sweep of equal highs, a meaningful 15M CHoCH down, bearish displacement, a fresh FVG and alignment with a 4H lower-high structure. Do not count several labels describing the same candle as independent evidence.
 
-## 5A. Integrated XAU Cartel learning framework
+## 5A. Native skill decomposition
 
-The supplied XAU Cartel learning guide consolidates seven video subjects: gold weekly outlook, Bitcoin weekly outlook, market structure, liquidity, order blocks, fair-value gaps and Fed/policy context. Use these as a connected way of reading markets, not as isolated indicators or a mechanical checklist.
+The XAU Cartel learning material is to be packaged as multiple separate OpenClaw workspace skills, not bundled into one oversized market-reading skill. Keep the expertise modular so the native agent can use the relevant method for the user's question while retaining one conversation and one agent loop.
 
-For gold, the analytical chain is:
+Proposed workspace skill boundaries:
 
-1. Establish the current macro/policy backdrop and relevant catalysts.
-2. Map daily/4H trend or range, meaningful swings and decision boundaries.
-3. Identify obvious liquidity pools before price interacts with them.
-4. Evaluate whether the interaction is a sweep or a genuine breakout using closes, follow-through, timeframe and context.
-5. Look for meaningful structure response (BOS/CHoCH) and displacement.
-6. Assess any resulting OB/FVG retracement area, including timeframe, freshness, mitigation and invalidation.
-7. Use the next opposing liquidity/structural area as a conditional objective and compare competing scenarios.
+| Skill directory | Source material / responsibility | Status |
+|---|---|---|
+| `atlas-market-structure` | XAU Cartel Market Structure lesson: trend/range, meaningful swings, BOS/CHoCH and multi-timeframe context. | Source recovered; native skill not yet created. |
+| `atlas-liquidity` | XAU Cartel Liquidity lesson: BSL/SSL, likely order pools, sweeps versus breakouts and liquidity objectives. | Source recovered; native skill not yet created. |
+| `atlas-smart-money-concepts` | XAU Cartel Order Blocks and FVG lessons: displacement, OB candidates, FVG/CE/IFVG, mitigation and confluence. | Source recovered; native skill not yet created. |
+| `atlas-volume-profile` | POC, VAH, VAL, HVN and LVN from a separately sourced volume-at-price methodology. | Source not recovered; do not implement or invent levels yet. |
+| `atlas-news-impact` | Forex Jarvis headline intelligence and news-impact workflow, kept distinct from scheduled economic research. | Native skill created; RSS integration is not connected. |
+| `atlas-macro-research` | Forex Jarvis calendar and macro-research workflow: official release data, actual/forecast/previous, revisions and policy interpretation. | Source code inspected; native skill not yet created. Historical reaction database is not a prerequisite. |
+| `atlas-trade-scenario-analysis` | Combine relevant evidence into conditional bullish, bearish and neutral scenarios with confirmation, invalidation and objectives. | Analytical rules documented; native skill not yet created. |
+| `atlas-risk-management` | Risk and execution conditions, invalidation, targets, costs and approval boundaries. | Requires focused source review and validation. |
 
-The unifying narrative is higher-timeframe context → liquidity objective → sweep/breakout test → structure response → displacement → possible OB/FVG retracement → opposing liquidity objective. Macro helps explain why repricing may be occurring; price action shows whether and how that context is reflected in the instrument. Do not force the chain when evidence is missing.
+`atlas-market-reading` remains the conversational coordinator. It establishes context, selects relevant data, integrates specialist evidence and produces the answer. It should not duplicate all specialist content. `atlas-market-stress` remains a separate cross-asset systemic-stress research skill.
 
-For Fed and gold analysis, examine the decision together with guidance, statement language, projections, voting differences and press-conference implications. Compare inflation and other releases with expectations, previous values, revisions and relevant components. A hawkish repricing may support USD/yields and weigh on gold, all else equal; a dovish repricing may pressure USD/yields and support gold, all else equal. These are conditional channels, not automatic direction rules. Check observed USD/yield response only when reliable data exists.
+The seven XAU Cartel video subjects—gold weekly outlook, Bitcoin weekly outlook, market structure, liquidity, order blocks, FVGs and Fed explained—are represented in the consolidated learning guide. The guide is a teaching reference, not validation of profitable performance. Its example dates, price levels and claimed outcomes are historical transcript material and must not be reused as live signals.
 
-The weekly outlook transcript examples are historical teaching material. Their dates, price levels, event claims and claimed trade outcomes must not be reused as current market facts or treated as validated performance.
-
-### Volume Profile boundary
-
-The supplied seven-video learning set does not establish a Volume Profile method or supply verified POC, VAH, VAL, HVN or LVN data. These concepts may be added as a separate analytical layer only when a genuine volume-at-price/profile source is connected. Ordinary OHLC bars and the current MT5 adapter's volume field are not sufficient to claim those levels. Until then, report the data as unavailable; do not fabricate profile values or attribute them to the XAU Cartel videos.
+Volume Profile must remain a separately sourced extension. The recovered video set does not establish its methodology or provide POC/VAH/VAL/HVN/LVN data. The current MT5 OHLC adapter does not supply volume-at-price data.
 
 ## 6. Scenario and confidence rules
 
