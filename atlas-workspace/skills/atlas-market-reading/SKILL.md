@@ -110,24 +110,24 @@ Consider bullish, bearish and neutral/range cases, but weight them honestly. Use
 
 The XAU Cartel learning guide is source material for multiple separate OpenClaw skills. Do not treat the guide as one giant skill or copy all of its specialist knowledge into this coordinator.
 
-The planned skill boundaries are:
+The specialist skill packages now created are:
 - `atlas-market-structure`: trend/range, meaningful swings, BOS/CHoCH and multi-timeframe structure.
 - `atlas-liquidity`: buy-side/sell-side pools, likely stop clusters, sweeps versus breakouts, and liquidity objectives.
 - `atlas-smart-money-concepts`: displacement, candidate order blocks, FVG/CE/IFVG, mitigation and confluence.
 - `atlas-news-impact`: current headline collection/research, classification, affected markets, severity and impact channels. This native skill has been created separately.
-- `atlas-macro-research`: scheduled economic events, actual/forecast/previous values, revisions and macro-policy interpretation. Keep separate from headline intelligence; this skill is not yet ported.
+- `atlas-macro-research`: scheduled economic events, actual/forecast/previous values, revisions and macro-policy interpretation. Keep separate from headline intelligence.
 - `atlas-trade-scenario-analysis`: combine the relevant evidence into conditional bullish, bearish and neutral scenarios, confirmation and invalidation.
 - `atlas-risk-management`: risk, execution conditions and trade safeguards; requires its own source review and validation.
 - `atlas-volume-profile`: proposed only. The recovered XAU Cartel guide does not provide a source-backed method or profile data for POC, VAH, VAL, HVN or LVN, so do not claim or fabricate those levels.
 
-This coordinator keeps the overall conversational market-reading flow and selects relevant specialist knowledge. The specialist skills own their detailed methods. Build and verify them incrementally; a planned skill is not an implemented or validated capability.
+This coordinator keeps the overall conversational market-reading flow and selects relevant specialist knowledge. The specialist skills own their detailed methods. All listed skill packages except Volume Profile have been created on this branch, but their presence in source control does not prove local skill discovery, live data access or runtime behaviour.
 
 ## News Impact and economic research
 
 - For current headlines or a News Impact request, use the separate `atlas-news-impact` skill. It is a native analytical workflow; it does not itself provide RSS/web access.
 - Use only configured OpenClaw search/fetch tools or actual connected news sources. The Forex Jarvis RSS scanner and its event-classification tools are not connected to this OpenClaw branch. Never imply the original feed is live here.
 - Keep current headline intelligence separate from scheduled calendar research. For economic releases, prefer official release pages and reliable calendar sources; preserve event time/timezone, actual, consensus forecast, previous, revisions and units.
-- Use `atlas_economic_surprise` only when sourced numeric actual and forecast values are available. It performs actual-minus-forecast arithmetic; it does not fetch or store calendar events and does not infer bullish/bearish asset direction. Preserve the source and units and pass null for missing values.
+- Use `atlas-macro-research` for scheduled-event research and macro interpretation. Use `atlas_economic_surprise` only when sourced numeric actual and forecast values are available. It performs actual-minus-forecast arithmetic; it does not fetch or store calendar events and does not infer bullish/bearish asset direction. Preserve the source and units and pass null for missing values.
 - Do not port or recreate the legacy fixed per-pair percentage estimates as forecasts. They were heuristic baselines scaled by keyword-derived severity, and the old `confidence` field duplicated severity rather than measured predictive confidence.
 - Do not build or require the legacy historical event-reaction database for ordinary News Impact. Describe an observed market reaction only when timestamped price data is available; otherwise state that the reaction is unverified.
 - Reconcile macro/news evidence with chart evidence. If they conflict, state the conflict rather than forcing a single direction.
