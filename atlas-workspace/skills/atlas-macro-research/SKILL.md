@@ -1,6 +1,6 @@
 ---
 name: atlas-macro-research
-description: Use for scheduled economic releases, actual-versus-forecast analysis, central-bank decisions, inflation/employment data, and macro transmission into currencies, gold, oil, or other markets.
+description: Use for economic releases, central-bank decisions, actual-versus-forecast analysis and macro effects on currencies, gold and oil.
 ---
 
 # ATLAS Macro Research
