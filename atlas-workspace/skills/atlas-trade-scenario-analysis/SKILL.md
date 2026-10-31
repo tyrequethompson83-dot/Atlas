@@ -1,6 +1,6 @@
 ---
 name: atlas-trade-scenario-analysis
-description: Use when combining market structure, liquidity, price delivery and macro evidence into conditional bullish, bearish, or neutral market scenarios with confirmation and invalidation.
+description: Use to combine structure, liquidity, price delivery and macro evidence into conditional bullish, bearish or neutral market scenarios.
 ---
 
 # ATLAS Trade Scenario Analysis
